@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head><meta charset="UTF-8"><title>Login</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<!-- Fichier Manifest -->
+<link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+
+<!-- Icône (optionnelle pour mobile) -->
+<link rel="icon" type="image/png" href="{{ url_for('static', filename='logo_kwetu.png') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+<h2><i class="fas fa-sign-in-alt"></i>Connexion</h2>
+<form method="POST">
+    <input type="text" name="username" placeholder="Nom d'utilisateur" required><br>
+    <input type="password" name="password" placeholder="Mot de passe" required><br>
+    <button type="submit">Se connecter</button>
+</form>
+<p style="color:red;">{{ error }}</p>
+<!-- Enregistrement du service worker -->
+<script src="{{ url_for('static', filename='service-worker-register.js') }}"></script>
+</body>
+</html>

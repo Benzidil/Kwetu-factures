@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Kwetu - Accueil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Fichier Manifest -->
+<link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+
+<!-- Icône (optionnelle pour mobile) -->
+<link rel="icon" type="image/png" href="{{ url_for('static', filename='logo_kwetu.png') }}">
+</head>
+<body>
+    <div class="container">
+        <img src="/static/logo_kwetu.png" alt="Logo" width="150">
+        <h1>Bienvenue sur Kwetu</h1>
+        <a href="/login" class="button">Connexion</a>
+        <a href="/register" class="button">Créer un compte</a>
+        <a href="/static/kwetu_app.zip" download class="button">Télécharger l'app</a>
+    </div>
+    <!-- Enregistrement du service worker -->
+<script src="{{ url_for('static', filename='service-worker-register.js') }}"></script>
+</body>
+</html>
