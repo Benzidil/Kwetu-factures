@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, redirect, session
 from werkzeug.security import generate_password_hash, check_password_hash
-from waitress import serve
 import sqlite3, os
 
 app = Flask(__name__)
